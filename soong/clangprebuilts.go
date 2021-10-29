@@ -34,7 +34,7 @@ const libclangSoFormat = "libclang.so.%sgit"
 const libclangCxxSoFormat = "libclang_cxx.so.%sgit"
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
-const libxml2SoName = "libxml2.so.2.9.10"
+const libxml2SoName = "libxml2.so.2.9.12"
 
 // This module is used to generate libfuzzer, libomp static libraries and
 // libclang_rt.* shared libraries. When LLVM_PREBUILTS_VERSION and
@@ -282,7 +282,7 @@ func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 	if libName == "libc++" || libName == "libc++abi" {
 		libName += ".1"
 	} else if libName == "libxml2" {
-		libName += ".2.9.10"
+		libName += ".2.9.12"
 	}
 	lib := path.Join(clangDir, "lib64", libName+".dylib")
 
