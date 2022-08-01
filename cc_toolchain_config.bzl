@@ -558,7 +558,7 @@ def android_cc_toolchain(
     native.filegroup(
         name = "%s_compiler_clang_includes" % name,
         srcs =
-            native.glob([clang_version_directory + "/lib64/clang/*/include/**"]),
+            native.glob([clang_version_directory + "/lib/clang/*/include/**"]),
     )
 
     native.filegroup(

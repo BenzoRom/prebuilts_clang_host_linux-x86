@@ -19,7 +19,7 @@ clang_version(
     name = "clang",
     directory = DEFAULT_VERSION,
     includes = [
-        "lib64/clang/%s/include" % DEFAULT_SHORT_VERSION,
+        "lib/clang/%s/include" % DEFAULT_SHORT_VERSION,
     ],
 )
 
@@ -208,7 +208,7 @@ cc_toolchain_suite(
     },
 )
 
-_LIBCLANG_RT_PREFIX = "%s/lib64/clang/%s/lib/linux" % (DEFAULT_VERSION, DEFAULT_SHORT_VERSION)
+_LIBCLANG_RT_PREFIX = "%s/lib/clang/%s/lib/linux" % (DEFAULT_VERSION, DEFAULT_SHORT_VERSION)
 
 cc_import(
     name = "libclang_rt",
